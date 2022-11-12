@@ -432,7 +432,7 @@ class AppStyle {
   static TextStyle txtOverpassRegular14Bluegray9009e = TextStyle(
     color: ColorConstant.bluegray9009e,
     fontSize: getFontSize(
-      14,
+      14.sp,
     ),
     fontFamily: 'Overpass',
     fontWeight: FontWeight.w400,
@@ -677,7 +677,7 @@ class AppStyle {
   static TextStyle txtRubikRegular14Black900 = TextStyle(
     color: ColorConstant.black900,
     fontSize: getFontSize(
-      14,
+      14.sp,
     ),
     fontFamily: 'Rubik',
     fontWeight: FontWeight.w400,
@@ -731,7 +731,7 @@ class AppStyle {
   static TextStyle txtRubikMedium18 = TextStyle(
     color: ColorConstant.bluegray901,
     fontSize: getFontSize(
-      18,
+      18.sp,
     ),
     fontFamily: 'Rubik',
     fontWeight: FontWeight.w500,
@@ -767,7 +767,7 @@ class AppStyle {
   static TextStyle txtRubikRegular14Bluegray300cc = TextStyle(
     color: ColorConstant.bluegray300Cc,
     fontSize: getFontSize(
-      14,
+      16.w,
     ),
     fontFamily: 'Rubik',
     fontWeight: FontWeight.w400,

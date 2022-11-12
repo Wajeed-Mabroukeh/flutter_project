@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
         fallbackLocale: Locale('en', 'US'),
         title: 'final_grad_proj',
         initialBinding: InitialBindings(),
-        initialRoute: AppRoutes.walkthroughThreeScreen  ,
+        initialRoute: AppRoutes.notificationMScreen ,
         getPages: AppRoutes.pages,
       );
 
