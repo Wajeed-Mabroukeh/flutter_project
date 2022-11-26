@@ -1,3 +1,5 @@
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import '../controller/doctor_controller.dart';
 import '../models/listrectangle506_item_model.dart';
 import 'package:final_grad_proj/core/app_export.dart';
@@ -5,19 +7,33 @@ import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class Listrectangle506ItemWidget extends StatelessWidget {
-  Listrectangle506ItemWidget(this.listrectangle506ItemModelObj);
+
+
+  Listrectangle506ItemWidget(this.listrectangle506ItemModelObj,
+       this.Name,
+       this.Specialist,
+       this.Viwers1,
+       this.Viwers2,
+       this.Stars,
+       this.Fav);
 
   Listrectangle506ItemModel listrectangle506ItemModelObj;
+  String Name;
+  String Specialist;
+  int Viwers1;
+  double Viwers2;
+  int Stars;
+  bool Fav;
 
   var controller = Get.find<DoctorController>();
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: getMargin(
-        top: 7.0,
-        right: 3,
-        bottom: 7.0,
+      margin: EdgeInsets.only(
+        top: 7.0.h,
+        right: 3.w,
+        bottom: 7.0.h,
       ),
       decoration: AppDecoration.outlineBlack900141.copyWith(
         borderRadius: BorderRadiusStyle.roundedBorder6,
@@ -27,41 +43,30 @@ class Listrectangle506ItemWidget extends StatelessWidget {
         mainAxisSize: MainAxisSize.max,
         children: [
           Padding(
-            padding: getPadding(
-              left: 9,
-              top: 11,
-              bottom: 11,
+            padding: EdgeInsets.only(
+              left: 9.w,
+              top: 11.h,
+              bottom: 11.h,
+              right: 0
             ),
             child: ClipRRect(
-              borderRadius: BorderRadius.circular(
-                getHorizontalSize(
-                  8.00,
-                ),
-              ),
+              borderRadius: BorderRadius.circular(8.00.r),
               child: CommonImageView(
                 imagePath: ImageConstant.imgRectangle506,
-                height: getSize(
-                  82.00,
-                ),
-                width: getSize(
-                  82.00,
-                ),
+                height:82.00.h,
+                width: 82.00.w,
                 fit: BoxFit.cover,
               ),
             ),
           ),
           Container(
-            height: getVerticalSize(
-              72.00,
-            ),
-            width: getHorizontalSize(
-              217.00,
-            ),
-            margin: getMargin(
-              left: 15,
-              top: 16,
-              right: 9,
-              bottom: 16,
+            height: 72.00.h,
+            width: 230.00.w,
+            margin: EdgeInsets.only(
+              left: 15.w,
+              top: 16.h,
+              right: 9.w,
+              bottom: 16.h,
             ),
             child: Stack(
               alignment: Alignment.topRight,
@@ -69,8 +74,8 @@ class Listrectangle506ItemWidget extends StatelessWidget {
                 Align(
                   alignment: Alignment.center,
                   child: Padding(
-                    padding: getPadding(
-                      right: 3,
+                    padding: EdgeInsets.only(
+                      right: 3.w,
                     ),
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
@@ -78,34 +83,32 @@ class Listrectangle506ItemWidget extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Padding(
-                          padding: getPadding(
-                            right: 10,
+                          padding: EdgeInsets.only(
+                            right: 10.w,
                           ),
                           child: Text(
-                            "msg_dr_pediatricia".tr,
+                            Name.tr,
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
                             style: AppStyle.txtRubikMedium18,
                           ),
                         ),
                         Padding(
-                          padding: getPadding(
-                            top: 5,
-                            right: 10,
+                          padding: EdgeInsets.only(
+                            top: 5.h,
+                            right: 10.w,
                           ),
                           child: Text(
-                            "msg_specialist_card".tr,
+                            Specialist.tr,
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
                             style: AppStyle.txtRubikLight14,
                           ),
                         ),
                         Container(
-                          width: getHorizontalSize(
-                            213.00,
-                          ),
-                          margin: getMargin(
-                            top: 9,
+                          width: 213.00.w,
+                          margin: EdgeInsets.only(
+                            top: 9.h,
                           ),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -113,31 +116,26 @@ class Listrectangle506ItemWidget extends StatelessWidget {
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
-                                padding: getPadding(
-                                  top: 5,
-                                  bottom: 3,
+                                padding: EdgeInsets.only(
+                                  top: 5.h,
+                                  bottom: 3.h,
                                 ),
                                 child: CommonImageView(
                                   svgPath: ImageConstant.imgMap,
-                                  height: getVerticalSize(
-                                    10.00,
-                                  ),
-                                  width: getHorizontalSize(
-                                    80.00,
-                                  ),
+                                  height: 10.00.h,
+                                  width: 80.00.w
                                 ),
                               ),
                               Container(
                                 child: RichText(
                                   text: TextSpan(
                                     children: [
+
                                       TextSpan(
-                                        text: "lbl_2_4".tr,
+                                        text: Viwers2.toString().tr,
                                         style: TextStyle(
                                           color: ColorConstant.bluegray901,
-                                          fontSize: getFontSize(
-                                            16,
-                                          ),
+                                          fontSize:16.sp,
                                           fontFamily: 'Rubik',
                                           fontWeight: FontWeight.w500,
                                         ),
@@ -146,9 +144,7 @@ class Listrectangle506ItemWidget extends StatelessWidget {
                                         text: " ",
                                         style: TextStyle(
                                           color: ColorConstant.bluegray500,
-                                          fontSize: getFontSize(
-                                            16,
-                                          ),
+                                          fontSize: 16.sp,
                                           fontFamily: 'PT Sans',
                                           fontWeight: FontWeight.w400,
                                         ),
@@ -157,20 +153,16 @@ class Listrectangle506ItemWidget extends StatelessWidget {
                                         text: "lbl2".tr,
                                         style: TextStyle(
                                           color: ColorConstant.bluegray500Cc,
-                                          fontSize: getFontSize(
-                                            16,
-                                          ),
+                                          fontSize: 16.sp,
                                           fontFamily: 'Rubik',
                                           fontWeight: FontWeight.w400,
                                         ),
                                       ),
                                       TextSpan(
-                                        text: "lbl_2475_views".tr,
+                                        text: Viwers1.toString().tr+"Views",
                                         style: TextStyle(
                                           color: ColorConstant.bluegray500Cc,
-                                          fontSize: getFontSize(
-                                            12,
-                                          ),
+                                          fontSize: 12.sp,
                                           fontFamily: 'Rubik',
                                           fontWeight: FontWeight.w400,
                                         ),
@@ -179,9 +171,7 @@ class Listrectangle506ItemWidget extends StatelessWidget {
                                         text: "lbl3".tr,
                                         style: TextStyle(
                                           color: ColorConstant.bluegray500Cc,
-                                          fontSize: getFontSize(
-                                            16,
-                                          ),
+                                          fontSize: 16.sp,
                                           fontFamily: 'Rubik',
                                           fontWeight: FontWeight.w400,
                                         ),
@@ -201,19 +191,22 @@ class Listrectangle506ItemWidget extends StatelessWidget {
                 Align(
                   alignment: Alignment.topRight,
                   child: Padding(
-                    padding: getPadding(
-                      left: 10,
-                      right: 3,
-                      bottom: 10,
+                    padding: EdgeInsets.only(
+                      left: 10.w,
+                      right: 3.w,
+                      bottom: 10.h,
                     ),
-                    child: CommonImageView(
-                      svgPath: ImageConstant.imgFavorite8X10,
-                      height: getVerticalSize(
-                        15.00,
-                      ),
-                      width: getHorizontalSize(
-                        19.00,
-                      ),
+                    child: GestureDetector(
+                      child:
+                          ElevatedButton(
+                            onPressed: () {  },
+                            child:
+                            CommonImageView(
+                              svgPath: Fav==true? ImageConstant.imgFavorite8X10:ImageConstant.imgFavorite15X19,
+                              height: 19.00.h,
+                              width: 19.00.w,
+                            ),
+                    ),
                     ),
                   ),
                 ),

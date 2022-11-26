@@ -1,22 +1,44 @@
-import '../controller/search_doctors_controller.dart';
+import 'package:final_grad_proj/presentation/search_doctors_screen/controller/search_doctors_controller.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import 'package:final_grad_proj/presentation/search_doctors_screen/models/search_doctors_model.dart';
 import '../models/listrectangle511_item_model.dart';
 import 'package:final_grad_proj/core/app_export.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class Listrectangle511ItemWidget extends StatelessWidget {
-  Listrectangle511ItemWidget(this.listrectangle511ItemModelObj);
+
+
+  Listrectangle511ItemWidget(this.listrectangle511ItemModelObj,
+      this.Doctor_name,
+      this.About,
+      this.Viewrs1,
+      this.Viewrs2,
+      this.Fav,
+      this.Stars,
+      this.img);
 
   Listrectangle511ItemModel listrectangle511ItemModelObj;
+  String Doctor_name;
+  String About;
+  int Viewrs1;
+  double Viewrs2;
+  bool Fav;
+  int Stars;
+  String img;
+
+
 
   var controller = Get.find<SearchDoctorsController>();
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: getMargin(
-        top: 6.5,
-        bottom: 6.5,
+      margin: EdgeInsets.only(
+        top: 7.0.h,
+        right: 3.w,
+        bottom: 7.0.h,
       ),
       decoration: AppDecoration.outlineBlack900141.copyWith(
         borderRadius: BorderRadiusStyle.roundedBorder6,
@@ -26,208 +48,170 @@ class Listrectangle511ItemWidget extends StatelessWidget {
         mainAxisSize: MainAxisSize.max,
         children: [
           Padding(
-            padding: getPadding(
-              left: 12,
-              top: 11,
-              bottom: 11,
+            padding: EdgeInsets.only(
+                left: 9.w,
+                top: 11.h,
+                bottom: 11.h,
+                right: 0
             ),
             child: ClipRRect(
-              borderRadius: BorderRadius.circular(
-                getHorizontalSize(
-                  8.00,
-                ),
-              ),
+              borderRadius: BorderRadius.circular(8.00.r),
               child: CommonImageView(
                 imagePath: ImageConstant.imgRectangle506,
-                height: getSize(
-                  82.00,
-                ),
-                width: getSize(
-                  82.00,
-                ),
+                height:82.00.h,
+                width: 65.00.w,
                 fit: BoxFit.cover,
               ),
             ),
           ),
-          Padding(
-            padding: getPadding(
-              left: 15,
-              top: 16,
-              right: 9,
-              bottom: 16,
+          Container(
+            height: 72.00.h,
+            width: 230.00.w,
+            margin: EdgeInsets.only(
+              left: 15.w,
+              top: 16.h,
+              right: 9.w,
+              bottom: 16.h,
             ),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.start,
+            child: Stack(
+              alignment: Alignment.topRight,
               children: [
                 Align(
                   alignment: Alignment.center,
-                  child: Container(
-                    width: getHorizontalSize(
-                      214.00,
+                  child: Padding(
+                    padding: EdgeInsets.only(
+                      right: 3.w,
                     ),
-                    margin: getMargin(
-                      right: 3,
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Text(
-                          "msg_dr_pediatricia".tr,
-                          overflow: TextOverflow.ellipsis,
-                          textAlign: TextAlign.left,
-                          style: AppStyle.txtRubikMedium18,
-                        ),
-                        Padding(
-                          padding: getPadding(
-                            bottom: 4,
-                          ),
-                          child: CommonImageView(
-                            svgPath: ImageConstant.imgFavorite8X10,
-                            height: getVerticalSize(
-                              17.00,
-                            ),
-                            width: getHorizontalSize(
-                              19.00,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: getPadding(
-                    top: 7,
-                    right: 10,
-                  ),
-                  child: Text(
-                    "msg_specialist_card".tr,
-                    overflow: TextOverflow.ellipsis,
-                    textAlign: TextAlign.left,
-                    style: AppStyle.txtRubikLight14,
-                  ),
-                ),
-                Align(
-                  alignment: Alignment.center,
-                  child: Container(
-                    width: getHorizontalSize(
-                      214.00,
-                    ),
-                    margin: getMargin(
-                      top: 7,
-                      right: 2,
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisSize: MainAxisSize.max,
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Padding(
-                          padding: getPadding(
-                            top: 4,
-                            bottom: 4,
+                          padding: EdgeInsets.only(
+                            right: 10.w,
                           ),
-                          child: CommonImageView(
-                            svgPath: ImageConstant.imgMap,
-                            height: getVerticalSize(
-                              12.00,
-                            ),
-                            width: getHorizontalSize(
-                              80.00,
-                            ),
+                          child: Text(
+                            Doctor_name.tr,
+                            overflow: TextOverflow.ellipsis,
+                            textAlign: TextAlign.left,
+                            style: AppStyle.txtRubikMedium18,
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(
+                            top: 5.h,
+                            right: 10.w,
+                          ),
+                          child: Text(
+                            About.tr,
+                            overflow: TextOverflow.ellipsis,
+                            textAlign: TextAlign.left,
+                            style: AppStyle.txtRubikLight14,
                           ),
                         ),
                         Container(
-                          child: RichText(
-                            text: TextSpan(
-                              children: [
-                                TextSpan(
-                                  text: "lbl_2_8".tr,
-                                  style: TextStyle(
-                                    color: ColorConstant.bluegray901,
-                                    fontSize: getFontSize(
-                                      16,
-                                    ),
-                                    fontFamily: 'Rubik',
-                                    fontWeight: FontWeight.w500,
-                                  ),
+                          width: 213.00.w,
+                          margin: EdgeInsets.only(
+                            top: 9.h,
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.only(
+                                  top: 5.h,
+                                  bottom: 3.h,
                                 ),
-                                TextSpan(
-                                  text: " ",
-                                  style: TextStyle(
-                                    color: ColorConstant.bluegray500,
-                                    fontSize: getFontSize(
-                                      16,
-                                    ),
-                                    fontFamily: 'PT Sans',
-                                    fontWeight: FontWeight.w400,
-                                  ),
+                                child: CommonImageView(
+                                    svgPath: ImageConstant.imgMap,
+                                    height: 10.00.h,
+                                    width: 80.00.w
                                 ),
-                                TextSpan(
-                                  text: "lbl2".tr,
-                                  style: TextStyle(
-                                    color: ColorConstant.bluegray500Cc,
-                                    fontSize: getFontSize(
-                                      16,
-                                    ),
-                                    fontFamily: 'Rubik',
-                                    fontWeight: FontWeight.w400,
+                              ),
+                              Container(
+                                child: RichText(
+                                  text: TextSpan(
+                                    children: [
+
+                                      TextSpan(
+                                        text: Viewrs2.toString().tr,
+                                        style: TextStyle(
+                                          color: ColorConstant.bluegray901,
+                                          fontSize:16.sp,
+                                          fontFamily: 'Rubik',
+                                          fontWeight: FontWeight.w500,
+                                        ),
+                                      ),
+                                      TextSpan(
+                                        text: " ",
+                                        style: TextStyle(
+                                          color: ColorConstant.bluegray500,
+                                          fontSize: 16.sp,
+                                          fontFamily: 'PT Sans',
+                                          fontWeight: FontWeight.w400,
+                                        ),
+                                      ),
+                                      TextSpan(
+                                        text: "lbl2".tr,
+                                        style: TextStyle(
+                                          color: ColorConstant.bluegray500Cc,
+                                          fontSize: 16.sp,
+                                          fontFamily: 'Rubik',
+                                          fontWeight: FontWeight.w400,
+                                        ),
+                                      ),
+                                      TextSpan(
+                                        text: Viewrs1.toString().tr+"Views",
+                                        style: TextStyle(
+                                          color: ColorConstant.bluegray500Cc,
+                                          fontSize: 12.sp,
+                                          fontFamily: 'Rubik',
+                                          fontWeight: FontWeight.w400,
+                                        ),
+                                      ),
+                                      TextSpan(
+                                        text: "lbl3".tr,
+                                        style: TextStyle(
+                                          color: ColorConstant.bluegray500Cc,
+                                          fontSize: 16.sp,
+                                          fontFamily: 'Rubik',
+                                          fontWeight: FontWeight.w400,
+                                        ),
+                                      ),
+                                    ],
                                   ),
+                                  textAlign: TextAlign.left,
                                 ),
-                                TextSpan(
-                                  text: "lbl_2821".tr,
-                                  style: TextStyle(
-                                    color: ColorConstant.bluegray500Cc,
-                                    fontSize: getFontSize(
-                                      12,
-                                    ),
-                                    fontFamily: 'Rubik',
-                                    fontWeight: FontWeight.w400,
-                                  ),
-                                ),
-                                TextSpan(
-                                  text: " ",
-                                  style: TextStyle(
-                                    color: ColorConstant.bluegray500Cc,
-                                    fontSize: getFontSize(
-                                      14,
-                                    ),
-                                    fontFamily: 'Rubik',
-                                    fontWeight: FontWeight.w400,
-                                  ),
-                                ),
-                                TextSpan(
-                                  text: "lbl_views".tr,
-                                  style: TextStyle(
-                                    color: ColorConstant.bluegray500Cc,
-                                    fontSize: getFontSize(
-                                      12,
-                                    ),
-                                    fontFamily: 'Rubik',
-                                    fontWeight: FontWeight.w400,
-                                  ),
-                                ),
-                                TextSpan(
-                                  text: "lbl3".tr,
-                                  style: TextStyle(
-                                    color: ColorConstant.bluegray500Cc,
-                                    fontSize: getFontSize(
-                                      16,
-                                    ),
-                                    fontFamily: 'Rubik',
-                                    fontWeight: FontWeight.w400,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            textAlign: TextAlign.left,
+                              ),
+                            ],
                           ),
                         ),
                       ],
+                    ),
+                  ),
+                ),
+                Align(
+                  alignment: Alignment.topRight,
+                  child: Padding(
+                    padding: EdgeInsets.only(
+                      left: 10.w,
+                      right: 3.w,
+                      bottom: 10.h,
+                    ),
+                    child: GestureDetector(
+                      // child:
+                      // ElevatedButton(
+                      //   onPressed: () {  },
+                        child:
+                        CommonImageView(
+                          svgPath: Fav==true? ImageConstant.imgFavorite8X10:ImageConstant.imgFavorite15X19,
+                          height: 19.00.h,
+                          width: 19.00.w,
+                        ),
+                      // ),
                     ),
                   ),
                 ),

@@ -1,3 +1,5 @@
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import '../controller/doctor_controller.dart';
 import '../models/rocmmenddoctor_item_model.dart';
 import 'package:final_grad_proj/core/app_export.dart';
@@ -17,8 +19,8 @@ class RocmmenddoctorItemWidget extends StatelessWidget {
       child: Align(
         alignment: Alignment.topRight,
         child: Container(
-          margin: getMargin(
-            right: 20,
+          margin: EdgeInsets.only(
+            right: 20.w,
           ),
           decoration: AppDecoration.outlineBlack90014.copyWith(
             borderRadius: BorderRadiusStyle.roundedBorder12,
@@ -31,35 +33,19 @@ class RocmmenddoctorItemWidget extends StatelessWidget {
                 alignment: Alignment.centerLeft,
                 child: ClipRRect(
                   borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(
-                      getHorizontalSize(
-                        12.00,
-                      ),
+                    topLeft: Radius.circular(12.00.r
                     ),
-                    topRight: Radius.circular(
-                      getHorizontalSize(
-                        12.00,
-                      ),
+                    topRight: Radius.circular(12.00.r
                     ),
-                    bottomLeft: Radius.circular(
-                      getHorizontalSize(
-                        2.00,
-                      ),
+                    bottomLeft: Radius.circular(2.00.r
                     ),
-                    bottomRight: Radius.circular(
-                      getHorizontalSize(
-                        2.00,
-                      ),
+                    bottomRight: Radius.circular(2.00.r
                     ),
                   ),
                   child: CommonImageView(
                     imagePath: ImageConstant.imgRectangle508131X136,
-                    height: getVerticalSize(
-                      131.00,
-                    ),
-                    width: getHorizontalSize(
-                      136.00,
-                    ),
+                    height: 150.00.h,
+                    width: 185.00.w,
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -67,10 +53,10 @@ class RocmmenddoctorItemWidget extends StatelessWidget {
               Align(
                 alignment: Alignment.center,
                 child: Padding(
-                  padding: getPadding(
-                    left: 23,
-                    top: 7,
-                    right: 21,
+                  padding: EdgeInsets.only(
+                    left: 23.w,
+                    top: 7.h,
+                    right: 21.w,
                   ),
                   child: Text(
                     "lbl_dr_truluck_nik".tr,
@@ -83,10 +69,10 @@ class RocmmenddoctorItemWidget extends StatelessWidget {
               Align(
                 alignment: Alignment.center,
                 child: Padding(
-                  padding: getPadding(
-                    left: 23,
-                    top: 2,
-                    right: 23,
+                  padding: EdgeInsets.only(
+                    left: 23.w,
+                    top: 2.h,
+                    right: 23.w,
                   ),
                   child: Text(
                     "msg_medicine_specia".tr,
@@ -99,20 +85,16 @@ class RocmmenddoctorItemWidget extends StatelessWidget {
               Align(
                 alignment: Alignment.centerLeft,
                 child: Padding(
-                  padding: getPadding(
-                    left: 29,
-                    top: 6,
-                    right: 29,
-                    bottom: 14,
+                  padding: EdgeInsets.only(
+                    left: 29.w,
+                    top: 6.h,
+                    right: 29.w,
+                    bottom: 14.h,
                   ),
                   child: CommonImageView(
                     svgPath: ImageConstant.imgMap,
-                    height: getVerticalSize(
-                      10.00,
-                    ),
-                    width: getHorizontalSize(
-                      57.00,
-                    ),
+                    height: 10.00.h,
+                    width: 57.00.w
                   ),
                 ),
               ),

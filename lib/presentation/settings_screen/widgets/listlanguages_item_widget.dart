@@ -1,3 +1,5 @@
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import '../controller/settings_controller.dart';
 import '../models/listlanguages_item_model.dart';
 import 'package:final_grad_proj/core/app_export.dart';
@@ -14,9 +16,9 @@ class ListlanguagesItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: getPadding(
-        top: 18.0,
-        bottom: 18.0,
+      padding: EdgeInsets.only(
+        top: 18.0.h,
+        bottom: 18.0.w,
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -29,10 +31,10 @@ class ListlanguagesItemWidget extends StatelessWidget {
             style: AppStyle.txtRubikLight16,
           ),
           Padding(
-            padding: getPadding(
-              left: 205,
-              top: 2,
-              bottom: 3,
+            padding: EdgeInsets.only(
+              left: 205.w,
+              top: 2.h,
+              bottom: 3.h,
             ),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -45,19 +47,15 @@ class ListlanguagesItemWidget extends StatelessWidget {
                   style: AppStyle.txtRubikLight12,
                 ),
                 Padding(
-                  padding: getPadding(
-                    left: 7,
-                    top: 1,
-                    bottom: 1,
+                  padding: EdgeInsets.only(
+                    left: 7.w,
+                    top: 1.h,
+                    bottom: 1.h,
                   ),
                   child: CommonImageView(
                     svgPath: ImageConstant.imgPlay,
-                    height: getVerticalSize(
-                      12.00,
-                    ),
-                    width: getHorizontalSize(
-                      7.00,
-                    ),
+                    height: 12.00.h,
+                    width: 7.00.w,
                   ),
                 ),
               ],

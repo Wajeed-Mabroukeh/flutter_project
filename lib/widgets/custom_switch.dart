@@ -1,5 +1,7 @@
 import 'package:final_grad_proj/core/app_export.dart';
+import 'package:final_grad_proj/presentation/walkthrough_three_screen/walkthrough_three_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 
 class CustomSwitch extends StatelessWidget {
@@ -28,15 +30,13 @@ class CustomSwitch extends StatelessWidget {
       padding: margin ?? EdgeInsets.zero,
       child: FlutterSwitch(
         value: value ?? false,
-        height: getHorizontalSize(22),
-        width: getHorizontalSize(36),
+        height: 22.h,
+        width: 36.w,
         toggleSize: 18,
-        borderRadius: getHorizontalSize(
-          11.00,
-        ),
+        borderRadius: 11.00.r,
         activeColor: ColorConstant.tealA702,
         activeToggleColor: ColorConstant.whiteA700,
-        inactiveColor: ColorConstant.tealA702,
+        inactiveColor: ColorConstant.gray600,
         inactiveToggleColor: ColorConstant.whiteA700,
         onToggle: (value) {
           onChanged!(value);

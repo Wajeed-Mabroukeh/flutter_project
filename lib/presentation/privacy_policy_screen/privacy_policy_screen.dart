@@ -132,6 +132,6 @@ import 'package:final_grad_proj/core/app_export.dart';import 'package:final_grad
  }
 
  onTapBtntf() {
-  Get.back();
+   Get.toNamed(AppRoutes.menuScreen);
  }
 }

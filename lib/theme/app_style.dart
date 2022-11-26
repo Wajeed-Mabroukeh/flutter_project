@@ -175,7 +175,7 @@ class AppStyle {
   static TextStyle txtOverpassBold13 = TextStyle(
     color: ColorConstant.bluegray900Bf,
     fontSize: getFontSize(
-      13,
+      13.sp,
     ),
     fontFamily: 'Overpass',
     fontWeight: FontWeight.w700,
@@ -767,7 +767,7 @@ class AppStyle {
   static TextStyle txtRubikRegular14Bluegray300cc = TextStyle(
     color: ColorConstant.bluegray300Cc,
     fontSize: getFontSize(
-      16.w,
+      16.sp,
     ),
     fontFamily: 'Rubik',
     fontWeight: FontWeight.w400,
@@ -820,9 +820,8 @@ class AppStyle {
 
   static TextStyle txtRubikLight10 = TextStyle(
     color: ColorConstant.bluegray500,
-    fontSize: getFontSize(
-      10,
-    ),
+    fontSize:
+      15.sp,
     fontFamily: 'Rubik',
     fontWeight: FontWeight.w300,
   );

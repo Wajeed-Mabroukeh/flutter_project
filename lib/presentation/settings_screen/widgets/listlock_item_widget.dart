@@ -1,3 +1,5 @@
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import '../controller/settings_controller.dart';
 import '../models/listlock_item_model.dart';
 import 'package:final_grad_proj/core/app_export.dart';
@@ -21,9 +23,9 @@ class ListlockItemWidget extends StatelessWidget {
         onTapRowplay!();
       },
       child: Padding(
-        padding: getPadding(
-          top: 14.5,
-          bottom: 14.5,
+        padding: EdgeInsets.only(
+          top: 14.5.h,
+          bottom: 14.5.h,
         ),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -34,8 +36,8 @@ class ListlockItemWidget extends StatelessWidget {
               mainAxisSize: MainAxisSize.max,
               children: [
                 CustomIconButton(
-                  height: 32,
-                  width: 32,
+                  height: 32.h,
+                  width: 32.w,
                   variant: IconButtonVariant.FillRed400,
                   shape: IconButtonShape.CircleBorder16,
                   child: CommonImageView(
@@ -43,10 +45,10 @@ class ListlockItemWidget extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: getPadding(
-                    left: 20,
-                    top: 6,
-                    bottom: 7,
+                  padding: EdgeInsets.only(
+                    left: 20.w,
+                    top: 6.h,
+                    bottom: 7.h,
                   ),
                   child: Text(
                     "lbl_change_password".tr,
@@ -58,19 +60,16 @@ class ListlockItemWidget extends StatelessWidget {
               ],
             ),
             Padding(
-              padding: getPadding(
-                left: 150,
-                top: 10,
-                bottom: 9,
+              padding: EdgeInsets.only(
+                left: 150.w,
+                top: 10.h,
+                bottom: 9.h,
               ),
+              // child: Icon(Icons.vibration)
               child: CommonImageView(
                 svgPath: ImageConstant.imgPlay,
-                height: getVerticalSize(
-                  12.00,
-                ),
-                width: getHorizontalSize(
-                  7.00,
-                ),
+                height: 12.00.h,
+                width: 7.00.w,
               ),
             ),
           ],
