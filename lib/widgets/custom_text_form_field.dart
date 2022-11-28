@@ -1,5 +1,6 @@
 import 'package:final_grad_proj/core/app_export.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomTextFormField extends StatelessWidget {
   CustomTextFormField(
@@ -109,36 +110,28 @@ class CustomTextFormField extends StatelessWidget {
       case TextFormFieldFontStyle.RubikRegular16:
         return TextStyle(
           color: ColorConstant.bluegray500,
-          fontSize: getFontSize(
-            16,
-          ),
+          fontSize: 16.sp,
           fontFamily: 'Rubik',
           fontWeight: FontWeight.w400,
         );
       case TextFormFieldFontStyle.RubikLight18:
         return TextStyle(
           color: ColorConstant.indigoA400,
-          fontSize: getFontSize(
-            18,
-          ),
+          fontSize: 16.sp,
           fontFamily: 'Rubik',
           fontWeight: FontWeight.w300,
         );
       case TextFormFieldFontStyle.RubikLight14:
         return TextStyle(
           color: ColorConstant.bluegray500E5,
-          fontSize: getFontSize(
-            14,
-          ),
+          fontSize: 14.sp,
           fontFamily: 'Rubik',
           fontWeight: FontWeight.w300,
         );
       default:
         return TextStyle(
           color: ColorConstant.bluegray500,
-          fontSize: getFontSize(
-            16,
-          ),
+          fontSize: 16.sp,
           fontFamily: 'Rubik',
           fontWeight: FontWeight.w300,
         );
@@ -149,15 +142,11 @@ class CustomTextFormField extends StatelessWidget {
     switch (shape) {
       case TextFormFieldShape.RoundedBorder6:
         return BorderRadius.circular(
-          getHorizontalSize(
-            6.00,
-          ),
+          6.00.r,
         );
       default:
         return BorderRadius.circular(
-          getHorizontalSize(
-            12.00,
-          ),
+         12.00.r,
         );
     }
   }
@@ -219,8 +208,9 @@ class CustomTextFormField extends StatelessWidget {
   _setPadding() {
     switch (padding) {
       default:
-        return getPadding(
-          all: 16,
+        return EdgeInsets.only(
+            top: 16.h, bottom: 16.h,
+            left: 16.w, right: 16.w
         );
     }
   }

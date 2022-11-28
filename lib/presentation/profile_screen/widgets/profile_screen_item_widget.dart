@@ -1,3 +1,5 @@
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import '../controller/profile_controller.dart';
 import '../models/profile_screen_item_model.dart';
 import 'package:final_grad_proj/core/app_export.dart';
@@ -14,9 +16,9 @@ class ProfileScreenItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: getMargin(
-        top: 6.0,
-        bottom: 6.0,
+      margin: EdgeInsets.only(
+        top: 6.0.h,
+        bottom: 6.0.h
       ),
       decoration: AppDecoration.fillWhiteA700.copyWith(
         borderRadius: BorderRadiusStyle.roundedBorder12,
@@ -27,10 +29,10 @@ class ProfileScreenItemWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Padding(
-            padding: getPadding(
-              left: 20,
-              top: 9,
-              right: 20,
+            padding: EdgeInsets.only(
+              left: 20.w,
+              top: 9.h,
+              right: 20.w,
             ),
             child: Text(
               "lbl_name".tr,
@@ -42,11 +44,11 @@ class ProfileScreenItemWidget extends StatelessWidget {
           Align(
             alignment: Alignment.center,
             child: Padding(
-              padding: getPadding(
-                left: 20,
-                top: 2,
-                right: 20,
-                bottom: 13,
+              padding: EdgeInsets.only(
+                left: 20.w,
+                top: 2.h,
+                right: 20.w,
+                bottom: 13.h,
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -54,8 +56,8 @@ class ProfileScreenItemWidget extends StatelessWidget {
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Padding(
-                    padding: getPadding(
-                      top: 5,
+                    padding: EdgeInsets.only(
+                      top: 5.h,
                     ),
                     child: Text(
                       "lbl_abdullah_mamun".tr,
@@ -65,17 +67,13 @@ class ProfileScreenItemWidget extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: getPadding(
-                      bottom: 9,
+                    padding: EdgeInsets.only(
+                      bottom: 9.h,
                     ),
                     child: CommonImageView(
                       svgPath: ImageConstant.imgEdit,
-                      height: getVerticalSize(
-                        14.00,
-                      ),
-                      width: getHorizontalSize(
-                        15.00,
-                      ),
+                      height: 14.00.h,
+                      width: 15.00.w,
                     ),
                   ),
                 ],

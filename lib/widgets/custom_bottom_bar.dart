@@ -1,5 +1,6 @@
 import 'package:final_grad_proj/core/app_export.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomBottomBar extends StatelessWidget {
   CustomBottomBar({this.onChanged});
@@ -36,12 +37,8 @@ class CustomBottomBar extends StatelessWidget {
           boxShadow: [
             BoxShadow(
               color: ColorConstant.black9003f,
-              spreadRadius: getHorizontalSize(
-                2.00,
-              ),
-              blurRadius: getHorizontalSize(
-                2.00,
-              ),
+              spreadRadius: 2.00.h,
+              blurRadius: 2.00.r,
               offset: Offset(
                 0,
                 4,
@@ -60,22 +57,14 @@ class CustomBottomBar extends StatelessWidget {
             return BottomNavigationBarItem(
               icon: CommonImageView(
                 svgPath: bottomMenuList[index].icon,
-                height: getVerticalSize(
-                  18.00,
-                ),
-                width: getHorizontalSize(
-                  22.00,
-                ),
+                height: 18.00.h,
+                width: 22.00.w,
                 color: ColorConstant.bluegray400,
               ),
               activeIcon: CommonImageView(
                 svgPath: bottomMenuList[index].icon,
-                height: getVerticalSize(
-                  29.00,
-                ),
-                width: getHorizontalSize(
-                  20.00,
-                ),
+                height: 29.00.h,
+                width: 20.00.w,
                 color: ColorConstant.indigoA400,
               ),
               label: '',
@@ -119,7 +108,7 @@ Widget getDefaultWidget() {
           Text(
             'Please replace the respective Widget here',
             style: TextStyle(
-              fontSize: 18,
+              fontSize: 18.sp,
             ),
           ),
         ],

@@ -9,6 +9,7 @@ import 'package:final_grad_proj/widgets/custom_switch.dart';
 import 'package:flutter/material.dart';
 
 class SettingsScreen extends GetWidget<SettingsController> {
+
  @override Widget build(BuildContext context) {
   return SafeArea(child: Scaffold(backgroundColor: ColorConstant.whiteA700,
       body: Container(width: size.width,

@@ -1,5 +1,6 @@
 import 'package:final_grad_proj/core/app_export.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomRadioButton extends StatelessWidget {
   CustomRadioButton(
@@ -47,8 +48,8 @@ class CustomRadioButton extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: getPadding(
-                left: 10,
+              padding: EdgeInsets.only(
+                  left: 13.w,
               ),
               child: Text(
                 text ?? "",
@@ -67,9 +68,7 @@ class CustomRadioButton extends StatelessWidget {
       default:
         return TextStyle(
           color: ColorConstant.bluegray500,
-          fontSize: getFontSize(
-            16,
-          ),
+          fontSize: 16.sp,
           fontFamily: 'Rubik',
           fontWeight: FontWeight.w300,
         );

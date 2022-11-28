@@ -1,7 +1,13 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'controller/notification_m_controller.dart';import 'package:final_grad_proj/core/app_export.dart';import 'package:flutter/material.dart';class NotificationMScreen extends GetWidget<NotificationMController> {
+import 'controller/notification_m_controller.dart';import 'package:final_grad_proj/core/app_export.dart';import 'package:flutter/material.dart';class
+NotificationMScreen extends StatefulWidget {
+  @override
+  State<NotificationMScreen> createState() => _NotificationMScreenState();
+}
+
+class _NotificationMScreenState extends State<NotificationMScreen> {
   @override Widget build(BuildContext context) {
     return SafeArea(child: Scaffold(backgroundColor: ColorConstant.whiteA700,
         body: Container(width: size.width,
@@ -50,7 +56,8 @@ import 'controller/notification_m_controller.dart';import 'package:final_grad_pr
                                                 ..onTap = () {
                                                   //أول شيء بفحص إذا كان في هناك إشعارات، إن لم يك هناك يرسل له بوب أب بعدم وجود إشعارات
                                                   //أو في حال لم يكن مختار أي إشعار لحذفه(رح يتغيّر الكلام بداخل البوب أب )
-                                                    showDialog(
+
+                                                  showDialog(
                                                       context: context,
                                                       builder: (ctx) => AlertDialog(
                                                         title: const Text("you haven't Notifications yet"),

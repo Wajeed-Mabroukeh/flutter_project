@@ -1,5 +1,6 @@
 import 'package:final_grad_proj/core/app_export.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomIconButton extends StatelessWidget {
   CustomIconButton(
@@ -73,8 +74,9 @@ class CustomIconButton extends StatelessWidget {
   _setPadding() {
     switch (padding) {
       default:
-        return getPadding(
-          all: 8,
+        return EdgeInsets.only(
+            top: 8.h, bottom: 8.h,
+            left: 8.w, right: 8.w
         );
     }
   }
@@ -100,15 +102,11 @@ class CustomIconButton extends StatelessWidget {
     switch (shape) {
       case IconButtonShape.CircleBorder16:
         return BorderRadius.circular(
-          getHorizontalSize(
-            16.00,
-          ),
+          16.00.r,
         );
       default:
         return BorderRadius.circular(
-          getHorizontalSize(
-            10.00,
-          ),
+          10.00.r,
         );
     }
   }

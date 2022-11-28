@@ -4,6 +4,7 @@ import 'dart:io';
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class CommonImageView extends StatelessWidget {
@@ -65,8 +66,8 @@ class CommonImageView extends StatelessWidget {
         fit: fit,
         imageUrl: url!,
         placeholder: (context, url) => Container(
-          height: 30,
-          width: 30,
+          height: 30.h,
+          width: 30.w,
           child: LinearProgressIndicator(
             color: Colors.grey.shade200,
             backgroundColor: Colors.grey.shade100,

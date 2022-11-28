@@ -1,5 +1,6 @@
 import 'package:final_grad_proj/core/app_export.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomSearchView extends StatelessWidget {
   CustomSearchView(
@@ -93,27 +94,21 @@ class CustomSearchView extends StatelessWidget {
       case SearchViewFontStyle.OverpassRegular13:
         return TextStyle(
           color: ColorConstant.bluegray90072,
-          fontSize: getFontSize(
-            13,
-          ),
+          fontSize: 13.sp,
           fontFamily: 'Overpass',
           fontWeight: FontWeight.w400,
         );
       case SearchViewFontStyle.OverpassRegular13Bluegray500:
         return TextStyle(
           color: ColorConstant.bluegray500,
-          fontSize: getFontSize(
-            13,
-          ),
+          fontSize: 13.sp,
           fontFamily: 'Overpass',
           fontWeight: FontWeight.w400,
         );
       default:
         return TextStyle(
           color: ColorConstant.bluegray500,
-          fontSize: getFontSize(
-            15,
-          ),
+          fontSize: 15.sp,
           fontFamily: 'Rubik',
           fontWeight: FontWeight.w400,
         );
@@ -124,21 +119,15 @@ class CustomSearchView extends StatelessWidget {
     switch (shape) {
       case SearchViewShape.CircleBorder25:
         return BorderRadius.circular(
-          getHorizontalSize(
-            25.00,
-          ),
+          25.00.r,
         );
       case SearchViewShape.RoundedBorder6:
         return BorderRadius.circular(
-          getHorizontalSize(
-            6.00,
-          ),
+          6.00.r,
         );
       default:
         return BorderRadius.circular(
-          getHorizontalSize(
-            12.00,
-          ),
+          12.00.r,
         );
     }
   }
@@ -186,8 +175,9 @@ class CustomSearchView extends StatelessWidget {
   _setPadding() {
     switch (padding) {
       default:
-        return getPadding(
-          all: 18,
+        return EdgeInsets.only(
+            top: 18.h, bottom: 18.h,
+            left: 18.w, right: 18.w
         );
     }
   }

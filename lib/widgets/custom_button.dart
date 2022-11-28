@@ -84,16 +84,19 @@ class CustomButton extends StatelessWidget {
   _setPadding() {
     switch (padding) {
       case ButtonPadding.PaddingAll13:
-        return getPadding(
-          all: 13,
+        return EdgeInsets.only(
+          top: 13.h, bottom: 13.h,
+          left: 13.w, right: 13.w
         );
       case ButtonPadding.PaddingAll9:
-        return getPadding(
-          all: 9,
+        return EdgeInsets.only(
+            top: 9.h, bottom: 9.h,
+            left: 9.w, right: 9.w
         );
       default:
-        return getPadding(
-          all: 18,
+        return EdgeInsets.only(
+            top: 18.h, bottom: 18.h,
+            left: 18.w, right: 18.w
         );
     }
   }
@@ -120,16 +123,12 @@ class CustomButton extends StatelessWidget {
       case ButtonVariant.OutlineBluegray90019:
         return Border.all(
           color: ColorConstant.bluegray90019,
-          width: getHorizontalSize(
-            1.00,
-          ),
+          width: 1.00.w
         );
       case ButtonVariant.OutlineBluegray50028:
         return Border.all(
           color: ColorConstant.bluegray50028,
-          width: getHorizontalSize(
-            1.00,
-          ),
+          width: 1.00.w,
         );
       case ButtonVariant.FillIndigoA400:
       case ButtonVariant.OutlineIndigoA40019:
@@ -145,9 +144,7 @@ class CustomButton extends StatelessWidget {
     switch (shape) {
       case ButtonShape.RoundedBorder28:
         return BorderRadius.circular(
-          getHorizontalSize(
-            28.50,
-          ),
+          28.50.r,
         );
       case ButtonShape.CircleBorder25:
         return BorderRadius.circular(
@@ -157,17 +154,13 @@ class CustomButton extends StatelessWidget {
         );
       case ButtonShape.RoundedBorder12:
         return BorderRadius.circular(
-          getHorizontalSize(
-            12.00,
-          ),
+          12.00.r
         );
       case ButtonShape.Square:
         return BorderRadius.circular(0);
       default:
         return BorderRadius.circular(
-          getHorizontalSize(
-            6.00,
-          ),
+          6.00.r,
         );
     }
   }
@@ -178,12 +171,8 @@ class CustomButton extends StatelessWidget {
         return [
           BoxShadow(
             color: ColorConstant.indigoA40019,
-            spreadRadius: getHorizontalSize(
-              2.00,
-            ),
-            blurRadius: getHorizontalSize(
-              2.00,
-            ),
+            spreadRadius: 2.00.r,
+            blurRadius: 2.00.r,
             offset: Offset(
               0,
               12,
@@ -194,12 +183,8 @@ class CustomButton extends StatelessWidget {
         return [
           BoxShadow(
             color: ColorConstant.black9000f,
-            spreadRadius: getHorizontalSize(
-              2.00,
-            ),
-            blurRadius: getHorizontalSize(
-              2.00,
-            ),
+            spreadRadius: 2.00.r,
+            blurRadius: 2.00.r,
             offset: Offset(
               0,
               0,
@@ -221,18 +206,14 @@ class CustomButton extends StatelessWidget {
       case ButtonFontStyle.OverpassBold16:
         return TextStyle(
           color: ColorConstant.whiteA700,
-          fontSize: getFontSize(
-            16,
-          ),
+          fontSize: 16.sp,
           fontFamily: 'Overpass',
           fontWeight: FontWeight.w700,
         );
       case ButtonFontStyle.OverpassBold13:
         return TextStyle(
           color: ColorConstant.bluegray900Bf,
-          fontSize: getFontSize(
-            13.sp,
-          ),
+          fontSize: 13.sp,
           fontFamily: 'Overpass',
           fontWeight: FontWeight.w700,
         );
@@ -248,36 +229,28 @@ class CustomButton extends StatelessWidget {
       case ButtonFontStyle.RubikRegular16:
         return TextStyle(
           color: ColorConstant.bluegray500,
-          fontSize: getFontSize(
-            16,
-          ),
+          fontSize: 16.sp,
           fontFamily: 'Rubik',
           fontWeight: FontWeight.w400,
         );
       case ButtonFontStyle.RubikMedium14:
         return TextStyle(
           color: ColorConstant.whiteA700,
-          fontSize: getFontSize(
-            14,
-          ),
+          fontSize: 14.sp,
           fontFamily: 'Rubik',
           fontWeight: FontWeight.w500,
         );
       case ButtonFontStyle.RubikLight14:
         return TextStyle(
           color: ColorConstant.indigoA400,
-          fontSize: getFontSize(
-            14,
-          ),
+          fontSize: 14.sp,
           fontFamily: 'Rubik',
           fontWeight: FontWeight.w300,
         );
       default:
         return TextStyle(
           color: ColorConstant.whiteA700,
-          fontSize: getFontSize(
-            18,
-          ),
+          fontSize: 18.sp,
           fontFamily: 'Rubik',
           fontWeight: FontWeight.w500,
         );

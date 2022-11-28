@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(375, 812),
+      designSize: const Size(375,812),
       builder: (context , child){
             return   GetMaterialApp(
         debugShowCheckedModeBanner: false,
@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
 // <<<<<<< HEAD
 //         initialRoute: AppRoutes.notificationMScreen ,
 // =======
-        initialRoute: AppRoutes.searchDoctorsScreen, //splash
+        initialRoute: AppRoutes.profileScreen, //splash
 // >>>>>>> f87d49c9eb51e77eae1242417ac9a2a1b0c0b0a6
         getPages: AppRoutes.pages,
        

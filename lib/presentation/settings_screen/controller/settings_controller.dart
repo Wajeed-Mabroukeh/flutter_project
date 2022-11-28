@@ -1,4 +1,5 @@
-import '/core/app_export.dart';import 'package:final_grad_proj/presentation/settings_screen/models/settings_model.dart';class SettingsController extends GetxController {Rx<SettingsModel> settingsModelObj = SettingsModel().obs;
+import '/core/app_export.dart';import 'package:final_grad_proj/presentation/settings_screen/models/settings_model.dart';class
+SettingsController extends GetxController {Rx<SettingsModel> settingsModelObj = SettingsModel().obs;
 
 RxBool isSelectedSwitch = false.obs;
 

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:final_grad_proj/core/app_export.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AppDecoration {
   static BoxDecoration get gradientBluegray401Bluegray600 => BoxDecoration(
@@ -23,12 +24,8 @@ class AppDecoration {
         boxShadow: [
           BoxShadow(
             color: ColorConstant.black9000f,
-            spreadRadius: getHorizontalSize(
-              2.00,
-            ),
-            blurRadius: getHorizontalSize(
-              2.00,
-            ),
+            spreadRadius: 2.00.r,
+            blurRadius: 2.00.r,
             offset: Offset(
               0,
               0,
@@ -89,12 +86,8 @@ class AppDecoration {
         boxShadow: [
           BoxShadow(
             color: ColorConstant.black9000f,
-            spreadRadius: getHorizontalSize(
-              2.00,
-            ),
-            blurRadius: getHorizontalSize(
-              2.00,
-            ),
+            spreadRadius: 2.00.r,
+            blurRadius: 2.00.r,
             offset: Offset(
               0,
               -1,
@@ -110,12 +103,8 @@ class AppDecoration {
         boxShadow: [
           BoxShadow(
             color: ColorConstant.black9000c,
-            spreadRadius: getHorizontalSize(
-              2.00,
-            ),
-            blurRadius: getHorizontalSize(
-              2.00,
-            ),
+            spreadRadius: 2.00.r,
+            blurRadius: 2.00.r,
             offset: Offset(
               0,
               0,
@@ -128,12 +117,8 @@ class AppDecoration {
         boxShadow: [
           BoxShadow(
             color: ColorConstant.black9000c,
-            spreadRadius: getHorizontalSize(
-              2.00,
-            ),
-            blurRadius: getHorizontalSize(
-              2.00,
-            ),
+            spreadRadius: 2.00.r,
+            blurRadius: 2.00.r,
             offset: Offset(
               0,
               6,
@@ -208,12 +193,8 @@ class AppDecoration {
         boxShadow: [
           BoxShadow(
             color: ColorConstant.black90014,
-            spreadRadius: getHorizontalSize(
-              2.00,
-            ),
-            blurRadius: getHorizontalSize(
-              2.00,
-            ),
+            spreadRadius: 2.00.r,
+            blurRadius: 2.00.r,
             offset: Offset(
               0,
               0,
@@ -226,12 +207,8 @@ class AppDecoration {
         boxShadow: [
           BoxShadow(
             color: ColorConstant.black90014,
-            spreadRadius: getHorizontalSize(
-              2.00,
-            ),
-            blurRadius: getHorizontalSize(
-              2.00,
-            ),
+            spreadRadius: 2.00.r,
+            blurRadius: 2.00.r,
             offset: Offset(
               0,
               0,
@@ -275,18 +252,14 @@ class AppDecoration {
         color: ColorConstant.whiteA700,
         border: Border.all(
           color: ColorConstant.bluegray90019,
-          width: getHorizontalSize(
-            1.00,
-          ),
+          width: 1.00.w,
         ),
       );
   static BoxDecoration get txtOutlineBluegray50028 => BoxDecoration(
         color: ColorConstant.whiteA700,
         border: Border.all(
           color: ColorConstant.bluegray50028,
-          width: getHorizontalSize(
-            0.80,
-          ),
+          width: 0.80.w,
         ),
       );
   static BoxDecoration get fillWhiteA701 => BoxDecoration(
@@ -330,9 +303,7 @@ class AppDecoration {
   static BoxDecoration get outlineBluegray50028 => BoxDecoration(
         border: Border.all(
           color: ColorConstant.bluegray50028,
-          width: getHorizontalSize(
-            1.00,
-          ),
+          width: 1.00.w,
         ),
       );
   static BoxDecoration get fillTealA70014 => BoxDecoration(
@@ -343,130 +314,87 @@ class AppDecoration {
 class BorderRadiusStyle {
   static BorderRadius customBorderTL30 = BorderRadius.only(
     topLeft: Radius.circular(
-      getHorizontalSize(
-        30.00,
-      ),
+      30.00.r,
     ),
     topRight: Radius.circular(
-      getHorizontalSize(
-        30.00,
-      ),
+      30.00.r,
     ),
   );
 
   static BorderRadius customBorderTL12 = BorderRadius.only(
     topLeft: Radius.circular(
-      getHorizontalSize(
-        12.00,
-      ),
+      12.00.r,
     ),
     topRight: Radius.circular(
-      getHorizontalSize(
-        12.00,
-      ),
+      12.00.r,
     ),
     bottomLeft: Radius.circular(
-      getHorizontalSize(
-        2.00,
-      ),
+      2.00.r,
     ),
     bottomRight: Radius.circular(
-      getHorizontalSize(
-        2.00,
-      ),
+      2.00.r,
     ),
   );
 
   static BorderRadius txtRoundedBorder12 = BorderRadius.circular(
-    getHorizontalSize(
-      12.00,
-    ),
+    12.00.r,
   );
 
   static BorderRadius customBorderBL20 = BorderRadius.only(
     bottomLeft: Radius.circular(
-      getHorizontalSize(
-        20.00,
-      ),
+      20.00.r,
     ),
     bottomRight: Radius.circular(
-      getHorizontalSize(
-        20.00,
-      ),
+      20.00.r,
     ),
   );
 
   static BorderRadius customBorderBL30 = BorderRadius.only(
     bottomLeft: Radius.circular(
-      getHorizontalSize(
-        30.00,
-      ),
+      30.00.r,
     ),
     bottomRight: Radius.circular(
-      getHorizontalSize(
-        30.00,
-      ),
-    ),
+      30.00.r,)
   );
 
   static BorderRadius roundedBorder6 = BorderRadius.circular(
-    getHorizontalSize(
-      6.00,
-    ),
+    6.00.r,
   );
 
   static BorderRadius circleBorder25 = BorderRadius.circular(
-    getHorizontalSize(
-      25.00,
-    ),
+    25.00.r,
   );
 
   static BorderRadius roundedBorder12 = BorderRadius.circular(
-    getHorizontalSize(
-      12.00,
-    ),
+    12.00.r,
   );
 
   static BorderRadius roundedBorder2 = BorderRadius.circular(
-    getHorizontalSize(
-      2.50,
-    ),
+    2.50.r,
   );
 
   static BorderRadius roundedBorder32 = BorderRadius.circular(
-    getHorizontalSize(
-      32.00,
-    ),
+    32.00.r,
   );
 
   static BorderRadius circleBorder42 = BorderRadius.circular(
-    getHorizontalSize(
-      42.00,
-    ),
+    42.00.r,
   );
 
   static BorderRadius circleBorder21 = BorderRadius.circular(
-    getHorizontalSize(
-      21.00,
-    ),
+    21.00.r,
   );
 
   static BorderRadius circleBorder65 = BorderRadius.circular(
-    getHorizontalSize(
-      65.00,
-    ),
+    65.00.r,
   );
 
   static BorderRadius customBorderTL301 = BorderRadius.only(
     topLeft: Radius.circular(
-      getHorizontalSize(
-        30.00,
-      ),
+      30.00.r,
     ),
     bottomLeft: Radius.circular(
-      getHorizontalSize(
-        30.00,
-      ),
+      30.00.r,
     ),
   );
 }
